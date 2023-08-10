@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Management</title>
+    <!-- Link to Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../static/styles/style.css">
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1>{{ message }}</h1>
+      <!-- FORM OPENAI KEY -->
+      <form method="post" name="open_ai_form">
+        {% csrf_token %}
+        <fieldset>
+          <legend>OPENAI KEY</legend>
+          <div class="form-group">
+            <label for="openai-key">OPENAI Key</label>
+            <input
+              type="text"
+              class="form-control"
+              id=""
+              name="OPENAI_API_KEY"
+              placeholder="Enter your openai key"
+              value="{{ OPENAI_API_KEY }}"
+            />
+          </div>
+        </fieldset>
+        <div class="d-grid gap-2 d-flex justify-content-end">
+          <button class="btn btn-primary" type="submit">Button</button>
+        </div>
+      </form>
+
+      <!-- FORM SALESFORCE -->
+      <form class="mt-5" method="post" name="salesforce_form">
+        {% csrf_token %}
+        <fieldset>
+          <legend>SALESFORCE</legend>
+          <div class="form-group">
+            <label for="openai-key">Salesforce User</label>
+            <input
+              type="text"
+              class="form-control"
+              id=""
+              name="SF_USER"
+              placeholder="Enter salesforce user"
+              value="{{ SF_USER }}"
+            />
+            <label for="openai-key">Salesforce Password</label>
+            <input
+              type="text"
+              class="form-control"
+              id=""
+              name="SF_PASSWD"
+              placeholder="Enter salesforce password"
+              value="{{ SF_PASSWD }}"
+            />
+            <label for="openai-key">Salesforce Client ID</label>
+            <input
+              type="text"
+              class="form-control"
+              id=""
+              name="SF_CLIENT_ID"
+              placeholder="Enter salesforce client id"
+              value="{{ SF_CLIENT_ID }}"
+            />
+            <label for="openai-key">Saleforce Secret</label>
+            <input
+              type="text"
+              class="form-control"
+              id=""
+              name="SF_CLIENT_SECRET"
+              placeholder="Enter salesforce secret"
+              value="{{ SF_CLIENT_SECRET }}"
+            />
+            <label for="openai-key">Saleforce Authen URL</label>
+            <input
+              type="text"
+              class="form-control"
+              id=""
+              name="SF_AUTH_URL"
+              placeholder="Enter salesforce authen url"
+              value="{{ SF_AUTH_URL }}"
+            />
+          </div>
+        </fieldset>
+        <div class="d-grid gap-2 d-flex justify-content-end">
+          <button class="btn btn-primary" type="submit">Button</button>
+        </div>
+      </form>
+
+      <!-- FORM POSTGRES -->
+      <form class="mt-5" method="post" name="postgres_form">
+        {% csrf_token %}
+        <fieldset>
+          <legend>POSTGRES</legend>
+          <div class="form-group">
+            <label for="openai-key">Postgres user</label>
+            <input
+              type="text"
+              class="form-control"
+              id=""
+              name="POSTGRE_USER"
+              placeholder="Enter postgres user"
+              value="{{ POSTGRE_USER }}"
+            />
+            <label for="openai-key">Postgres Password</label>
+            <input
+              type="text"
+              class="form-control"
+              id=""
+              name="POSTGRE_PASSWD"
+              placeholder="Enter postgres password"
+              value="{{ POSTGRE_PASSWD }}"
+            />
+            <label for="openai-key">Postgres Host</label>
+            <input
+              type="text"
+              class="form-control"
+              id=""
+              name="POSTGRE_HOST"
+              placeholder="Enter postgres host"
+              value="{{ POSTGRE_HOST }}"
+            />
+            <label for="openai-key">Postgres Port</label>
+            <input
+              type="text"
+              class="form-control"
+              id=""
+              name="POSTGRE_PORT"
+              placeholder="Enter postgres port"
+              value="{{ POSTGRE_PORT }}"
+            />
+            <label for="openai-key">Postgres Database</label>
+            <input
+              type="text"
+              class="form-control"
+              id=""
+              name="POSTGRE_DATABASE"
+              placeholder="Enter postgres database"
+              value="{{ POSTGRE_DATABASE }}"
+            />
+          </div>
+        </fieldset>
+        <div class="d-grid gap-2 d-flex justify-content-end">
+          <button class="btn btn-primary" type="submit">Button</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Link to Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script></script>
+  </body>
+</html>
