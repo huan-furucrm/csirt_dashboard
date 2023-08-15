@@ -29,7 +29,7 @@ legend {
   display: block;
 }
 
-label{
+label {
   padding-left: 3px;
   margin-bottom: 0;
   font-size: 14px;
@@ -40,6 +40,6 @@ label::after {
   content: ":";
 }
 
-input{
+input {
   margin-bottom: 1rem;
 }
